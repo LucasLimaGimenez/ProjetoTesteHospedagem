@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Layout</title>
-    <link rel="stylesheet" href="/projeto teste/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header class="button-header">
         <nav class="nav-container">
@@ -26,9 +28,9 @@
 
     <div class="promo-carousel">
         <div class="slides">
-            <img  src="../projeto teste/img/promocao_pizza.png" alt="Promoção 1">
-            <img  src="../projeto teste/img/promocao_lanche.png" alt="Promoção 2">
-            <img  src="../projeto teste/img/promocao_fogazza.png" alt="Promoção 3">
+            <img src="img/promocao_pizza.png" alt="Promoção 1">
+            <img src="img/promocao_lanche.png" alt="Promoção 2">
+            <img src="img/promocao_fogazza.png" alt="Promoção 3">
         </div>
         <div class="dots">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -41,361 +43,176 @@
 
         <h1>Pizzas</h1>
 
-        <div id="section_pizza" class="product" data-price="29.99" onclick="showForm(this)">
-                <div class="product-info">
-                    <h2 class="product-title">Mussarela</h2>
-                    <p class="product-description">This is a short description of Product 1.</p>
-                    <p class="product-price">$29.99</p>
-                </div>
-                <div class="product-image">
-                    <img src="../projeto teste/img/pizza.png" alt="Product 1 Image">
-                </div>
+        <div class="product" data-id="piz_mussarela" data-price="20.00" onclick="showForm(this)">
+            <div class="product-info">
+                <h2 class="product-title">Mussarela</h2>
+                <p class="product-description">Massa fresca, queijo mozarela, molho de tomate, orégano e azeitonas verdes</p>
+                <p class="product-price">R$20.00</p>
+            </div>
+            <div class="product-image">
+                <img src="img/pizza.png" alt="Pizza Image">
+            </div>
         </div>
-
-        <div id="product-form" style="display:none;">
-            <h3>Adicionar Produto</h3>
-            <form id="addProductForm" onsubmit="addToCart(event)">
-                <label for="quantity">Quantidade:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-                <input type="hidden" id="product-price" name="price">
-                <button type="submit">Adicionar ao Carrinho</button>
-            </form>
-        </div>
-
-        <div class="product">
+        
+        <div class="product" data-id="piz_calabresa" data-price="30.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">Calabresa</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <p class="product-description">Massa fresca, calabresa com molho de tomate, cebola e azeitonas verdes</p>
+                <p class="product-price">R$30.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/pizza.png" alt="Product 1 Image">
+                <img src="img/pizza.png" alt="Pizza Image">
             </div>
         </div>
-
-        <div class="product">
+        
+        <div class="product" data-id="piz_portuguesa" data-price="50.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">Portuguesa</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <p class="product-description">Massa fresca, molho de tomate, queijo mozarela, fiambre, ovo cozido, cebola em rodelas e azeitonas pretas</p>
+                <p class="product-price">R$50.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/pizza.png" alt="Product 1 Image">
+                <img src="img/pizza.png" alt="Pizza Image">
             </div>
         </div>
 
         <h1>Lanches</h1>
 
-        <div id="section_lanche" class="product">
+        <div class="product" data-id="lan_burguer" data-price="10.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">X-Burguer</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
+                <p class="product-description">Saboroso hambúrguer com carne suculenta e queijo derretido.</p>
+                <p class="product-price">R$10.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/lanche.png" alt="Product 2 Image">
+                <img src="img/lanche.png" alt="Lanche Image">
             </div>
         </div>
 
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">X-Cheddar</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/lanche.png" alt="Product 2 Image">
-            </div>
-        </div>
-
-        <div class="product">
+        <div class="product" data-id="lan_salada" data-price="12.50" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">X-Salada</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
+                <p class="product-description">Hambúrguer com carne, alface, tomate e maionese fresca.</p>
+                <p class="product-price">R$12.50</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/lanche.png" alt="Product 2 Image">
+                <img src="img/lanche.png" alt="Lanche Image">
+            </div>
+        </div>
+        
+        <div class="product" data-id="lan_cheddar" data-price="15.00" onclick="showForm(this)">
+            <div class="product-info">
+                <h2 class="product-title">X-Cheddar</h2>
+                <p class="product-description">Hambúrguer com carne, queijo cheddar derretido e molho especial.</p>
+                <p class="product-price">R$15.00</p>
+            </div>
+            <div class="product-image">
+                <img src="img/lanche.png" alt="Lanche Image">
             </div>
         </div>
 
         <h1>Esfirra</h1>
 
-        <div id="section_esfirra" class="product">
+        <div class="product" data-id="esf_carne" data-price="3.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">Carne</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
+                <p class="product-description">Massa crocante recheada com carne temperada e saborosa.</p>
+                <p class="product-price">R$3.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/esfirra.png" alt="Product 3 Image">
+                <img src="img/esfirra.png" alt="Esfirra Image">
             </div>
         </div>
 
-        <div class="product">
+        <div class="product" data-id="esf_queijo" data-price="4.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">Queijo</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
+                <p class="product-description">Massa crocante recheada com queijo cremoso e derretido.</p>
+                <p class="product-price">R$4.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/esfirra.png" alt="Product 3 Image">
+                <img src="img/esfirra.png" alt="Esfirra Image">
             </div>
         </div>
-
-        <div class="product">
+        
+        <div class="product" data-id="esf_frango" data-price="5.00" onclick="showForm(this)">
             <div class="product-info">
-                <h2 class="product-title">Calabresa</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
+                <h2 class="product-title">Frango C/ Catupiry</h2>
+                <p class="product-description">Massa crocante recheada com frango desfiado e catupiry cremoso.</p>
+                <p class="product-price">R$5.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/esfirra.png" alt="Product 3 Image">
+                <img src="img/esfirra.png" alt="Esfirra Image">
             </div>
         </div>
 
         <h1>Beirute</h1>
 
-        <div id="section_beirute" class="product">
+        <div class="product" data-id="bei_contrafile" data-price="25.00" onclick="showForm(this)">
             <div class="product-info">
-                <h2 class="product-title">Contra filé</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <h2 class="product-title">Contra Filé</h2>
+                <p class="product-description">Pão recheado com contra-filé, legumes frescos e molho especial.</p>
+                <p class="product-price">R$25.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/beirute.png" alt="Product 1 Image">
+                <img src="img/beirute.png" alt="Beirute Image">
             </div>
         </div>
 
-        <div class="product">
+        <div class="product" data-id="bei_rosbife" data-price="30.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">Rosbife</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <p class="product-description">Pão recheado com rosbife, alface, tomate e molho delicioso.</p>
+                <p class="product-price">R$30.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/beirute.png" alt="Product 1 Image">
+                <img src="img/beirute.png" alt="Beirute Image">
             </div>
         </div>
-
-        <div class="product">
+        
+        <div class="product" data-id="bei_alcatra" data-price="35.00" onclick="showForm(this)">
             <div class="product-info">
-                <h2 class="product-title">Filé de frango</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <h2 class="product-title">Alcatra</h2>
+                <p class="product-description">Pão recheado com alcatra grelhada, queijo e molho saboroso.</p>
+                <p class="product-price">R$35.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/beirute.png" alt="Product 1 Image">
-            </div>
-        </div>
-
-        <h1>Fogazza</h1>
-
-        <div id="section_fogazza" class="product">
-            <div class="product-info">
-                <h2 class="product-title">Carne</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/fogazza.png" alt="Product 2 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Pizza</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/fogazza.png" alt="Product 2 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Frango</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/fogazza.png" alt="Product 2 Image">
-            </div>
-        </div>
-
-        <h1>Porção</h1>
-
-        <div id="section_porcao" class="product">
-            <div class="product-info">
-                <h2 class="product-title">Batata frita</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/porcao.png" alt="Product 3 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Calabresa</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/porcao.png" alt="Product 3 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Onion Rings</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/porcao.png" alt="Product 3 Image">
+                <img src="img/beirute.png" alt="Beirute Image">
             </div>
         </div>
 
         <h1>Refrigerante</h1>
 
-        <div id="section_refrigerante" class="product">
+        <div class="product" data-id="ref_cocacola" data-price="10.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">Coca-Cola</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <p class="product-description">Refresco clássico e gaseificado, com sabor único de Coca-Cola.</p>
+                <p class="product-price">R$10.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/refrigerante.png" alt="Product 1 Image">
+                <img src="img/refrigerante.png" alt="Refrigerante Image">
             </div>
         </div>
 
-        <div class="product">
+        <div class="product" data-id="ref_fanta" data-price="10.00" onclick="showForm(this)">
             <div class="product-info">
-                <h2 class="product-title">Fanta</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <h2 class="product-title">Fanta Uva/Laranja</h2>
+                <p class="product-description">Bebida refrescante e frutada, disponível nos sabores laranja e uva.</p>
+                <p class="product-price">R$10.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/refrigerante.png" alt="Product 1 Image">
+                <img src="img/refrigerante.png" alt="Refrigerante Image">
             </div>
         </div>
-
-        <div class="product">
+        
+        <div class="product" data-id="ref_guarana" data-price="10.00" onclick="showForm(this)">
             <div class="product-info">
                 <h2 class="product-title">Guaraná Antarctica</h2>
-                <p class="product-description">This is a short description of Product 1.</p>
-                <p class="product-price">$29.99</p>
+                <p class="product-description">Refresco energético e refrescante com sabor característico de guaraná.</p>
+                <p class="product-price">R$10.00</p>
             </div>
             <div class="product-image">
-                <img src="../projeto teste/img/refrigerante.png" alt="Product 1 Image">
-            </div>
-        </div>
-
-        <h1>Sobremesa</h1>
-
-        <div id="section_sobremesa" class="product">
-            <div class="product-info">
-                <h2 class="product-title">Pavê</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/sobremesa.png" alt="Product 2 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Pudim</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/sobremesa.png" alt="Product 2 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Torta Holandesa</h2>
-                <p class="product-description">This is a short description of Product 2.</p>
-                <p class="product-price">$39.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/sobremesa.png" alt="Product 2 Image">
-            </div>
-        </div>
-
-        <h1>Vinho</h1>
-
-        <div id="section_vinho" class="product">
-            <div class="product-info">
-                <h2 class="product-title">Branco</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/vinho.png" alt="Product 3 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Rose</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/vinho.png" alt="Product 3 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Tinto</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/vinho.png" alt="Product 3 Image">
-            </div>
-        </div>
-
-        <h1>Salgado</h1>
-
-        <div id="section_salgado" class="product">
-            <div class="product-info">
-                <h2 class="product-title">Coxinha</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/salgado.png" alt="Product 3 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Kibe</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/salgado.png" alt="Product 3 Image">
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-info">
-                <h2 class="product-title">Pastelzinho</h2>
-                <p class="product-description">This is a short description of Product 3.</p>
-                <p class="product-price">$49.99</p>
-            </div>
-            <div class="product-image">
-                <img src="../projeto teste/img/salgado.png" alt="Product 3 Image">
+                <img src="img/refrigerante.png" alt="Refrigerante Image">
             </div>
         </div>
 
@@ -404,13 +221,14 @@
     <footer>
         <button id="circular-button" class="circular-button">&#8679;</button>
         <button class="fixed-footer-button">Ver Sacola
-        <div id="total-container">
-            Total: R$ <span id="total-price">0</span>
-        </div>
+            <div id="total-container">
+                Total: R$ <span id="total-price">0</span>
+            </div>
         </button>
     </footer>
 
-    <script src="../projeto teste/script/script.js"></script>
+    <script src="script/script.js"></script>
 
 </body>
+
 </html>

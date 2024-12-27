@@ -53,22 +53,52 @@ setInterval(() => {
 let totalPrice = 0;
 
 function showForm(product) {
+    // Fechar qualquer formulário aberto
+    closeForm();
+
+    // Recuperar os dados do produto
     const price = product.getAttribute('data-price');
-    document.getElementById('product-price').value = price;
-    document.getElementById('product-form').style.display = 'block';
+    const productName = product.querySelector('.product-title').textContent;
+
+    // Criar o formulário
+    const formHtml = `
+        <div id="product-form" style="display:block;">
+            <h3>Adicionar ${productName}</h3>
+            <form id="addProductForm" onsubmit="addToCart(event, this)">
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                <input type="hidden" id="product-price" name="price" value="${price}">
+                <button type="submit">Adicionar ao Carrinho</button>
+                <button type="button" onclick="closeForm()">Cancelar</button>
+            </form>
+        </div>
+    `;
+
+    // Inserir o formulário logo após o produto clicado
+    product.insertAdjacentHTML('afterend', formHtml);
 }
 
-function addToCart(event) {
+function addToCart(event, form) {
     event.preventDefault();
-    const quantity = document.getElementById('quantity').value;
-    const price = document.getElementById('product-price').value;
-    
+
+    const quantity = parseInt(form.querySelector('#quantity').value, 10);
+    const price = parseFloat(form.querySelector('#product-price').value);
+
     const itemTotal = quantity * price;
     totalPrice += itemTotal;
-    
+
+    // Atualizar o total no carrinho
     document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-    
-    // Resetar o formulário e escondê-lo
-    document.getElementById('addProductForm').reset();
-    document.getElementById('product-form').style.display = 'none';
+
+    console.log(`Produto adicionado: Quantidade: ${quantity}, Total do Item: ${itemTotal.toFixed(2)}`);
+
+    // Fechar o formulário
+    closeForm();
+}
+
+function closeForm() {
+    const form = document.getElementById('product-form');
+    if (form) {
+        form.remove();
+    }
 }
